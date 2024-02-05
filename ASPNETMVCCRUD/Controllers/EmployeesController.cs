@@ -2,6 +2,7 @@
 using ASPNETMVCCRUD.Models;
 using ASPNETMVCCRUD.Models.Domains;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace ASPNETMVCCRUD.Controllers
 {
@@ -13,6 +14,14 @@ namespace ASPNETMVCCRUD.Controllers
         public EmployeesController(MVCDemoDbContext mvcDemoDbContext)
         {
             this.mvcDemoDbContext = mvcDemoDbContext;
+        }
+
+        [HttpGet]
+        public async Task <IActionResult> empList()
+        {
+           var employees = await mvcDemoDbContext.Employees.ToListAsync();
+            return View(employees);
+
         }
 
         [HttpGet]
@@ -34,8 +43,8 @@ namespace ASPNETMVCCRUD.Controllers
                 Department = addEmployeeRequest.Department
             };
             await mvcDemoDbContext.Employees.AddAsync(employee);
-            await mvcDemoDbContext.SaveChangesAsync();
-            return RedirectToAction("Add");
+            await mvcDemoDbContext.SaveChangesAsync(); 
+            return RedirectToAction("empList");
         }
     }
 }
