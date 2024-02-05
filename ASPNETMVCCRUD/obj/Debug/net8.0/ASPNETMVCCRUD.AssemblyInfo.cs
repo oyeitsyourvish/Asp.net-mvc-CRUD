@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ASPNETMVCCRUD")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e0f256d767dbae1eb154efe75446c7209b3e3cda")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1efb6732f419a1433f3a3bf8a1fd02ff72c5c0a8")]
 [assembly: System.Reflection.AssemblyProductAttribute("ASPNETMVCCRUD")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ASPNETMVCCRUD")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
